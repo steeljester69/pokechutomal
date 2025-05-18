@@ -1,5 +1,5 @@
 body {
-  font-family: "VT323", monospace;
+  font-family: "Pixelify Sans", monospace;
 }
 
 .canvas {
@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   position: relative;
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     margin-top: 8%;
   }
   .player-two-container {
@@ -32,7 +32,7 @@ body {
     }
   }
 
-  #charmander {
+  #charmeleon {
     position: absolute;
     margin-top: -4%;
     left: 15px;
@@ -114,7 +114,7 @@ body {
         outline: none;
         border: none;
         background-color: transparent;
-        font-family: "VT323", monospace;
+        font-family: "Pixelify Sans", monospace;
         font-size: 2.6rem;
         margin: 4%;
         &:hover {
@@ -132,7 +132,7 @@ body {
   transform: translateX(-50%);
   color: white;
   font-size: 20px;
-  font-family: "VT323", monospace;
+  font-family: "Pixelify Sans", monospace;
   padding: 8px 12px;
   background-color: rgb(61, 61, 255);
   border-radius: 8px;
