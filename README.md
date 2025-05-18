@@ -1,2 +1,1 @@
-# POKEMON BATTLE GAME
-Live site: https://zakschenck.github.io/pokemon-game/
+https://steeljester69.github.io/pokechutomal/
