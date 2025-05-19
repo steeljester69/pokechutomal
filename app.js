@@ -8,9 +8,11 @@ const playerOneHealthBar = document.querySelector(".p1-health");
 const playerOneHealthCount = document.querySelector(".health-count-p1");
 const gameStateText = document.querySelector(".game-state");
 const attackContainer = document.querySelector(".attack-container");
+const simple = document.querySelector(".animado");
 const restartBtn = document.querySelector(".restart-game");
 let playerOneHealth = 70;
 let playerTwoHealth = 70;
+let starGme = true;
 const playerTwoAttacks = ["Hoja afilada", "Placaje", "Muere Kevin", "Justo en el kevin"];
 
 // Cambia de color la barra de vida 
@@ -32,7 +34,31 @@ const checkWinner = (name, playerBar, playerCount) => {
   attackContainer.style.display = "none";
   playerCount.innerText = "0 / 70";
   restartBtn.style.display = "block";
+  restartBtn.innerText = "Game over"
 };
+// LA PUTA QUE LO PARIO
+   function animarElemento() {
+       const circulo = document.getElementById('miCirculo');
+
+      circulo.style.visibility = 'visible';
+      circulo.classList.remove('animado');
+      void circulo.offsetWidth; 
+      circulo.classList.add('animado');
+
+      setTimeout(() => {
+        circulo.style.visibility = 'hidden';
+        circulo.classList.remove('animado');
+        circulo.style.transform = 'translate(-50%, -50%) scale(1)';
+      }, 1000);
+    }
+
+    function iniciarAnimacion() {
+      animarElemento();
+
+      setTimeout(() => {
+        animarElemento();
+      }, 2500);
+    }
 
 // Logica de que el poke que vaya primero
 const playerOneAttack = (subtract, missCount, attackName) => {
@@ -120,17 +146,24 @@ const intervalFunction = () => {
 
 // Logica de reiniciar juego 
 const restartGame = () => {
-  playerTwoHealthBar.style.width = "70%";
-  gameStateText.style.display = "none";
-  attackContainer.style.display = "grid";
-  playerTwoHealthCount.innerText = "70 / 70";
-  playerOneHealthBar.style.width = "70%";
-  playerOneHealthBar.style.backgroundColor = "green";
-  playerTwoHealthBar.style.backgroundColor = "green";
-  playerOneHealthCount.innerText = "70 / 70";
-  restartBtn.style.display = "none";
-  playerOneHealth = 70;
-  playerTwoHealth = 70;
+  if(starGme === true){
+    restartBtn.style.display = "none";
+    starGme = false
+  }
+  else {
+    playerTwoHealthBar.style.width = "70%";
+    gameStateText.style.display = "none";
+    attackContainer.style.display = "grid";
+    playerTwoHealthCount.innerText = "70 / 70";
+    playerOneHealthBar.style.width = "70%";
+    playerOneHealthBar.style.backgroundColor = "green";
+    playerTwoHealthBar.style.backgroundColor = "green";
+    playerOneHealthCount.innerText = "70 / 70";
+    restartBtn.style.display = "none";
+    playerOneHealth = 70;
+    playerTwoHealth = 70;
+  }
+  
 };
 
 // La wea que dijo el man jsd 

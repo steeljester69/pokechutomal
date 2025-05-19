@@ -155,8 +155,10 @@ body {
 }
 
 .restart-game {
+  height: 120%;
+  width: 120%;
   position: absolute;
-  bottom: 8%;
+  bottom: 2%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -164,11 +166,11 @@ body {
   font-size: 20px;
   font-family: "Pixelify Sans", monospace;
   padding: 8px 12px;
-  background-color: #3d3dff;
+  background-color: #ffa600;
   border-radius: 8px;
   border: none;
   outline: none;
-  display: none;
+  display: block;
 }
 
 .restart-game:hover {
@@ -193,4 +195,57 @@ body {
   display: none;
   margin: 6%;
 }
+.metal-claw-animation {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #aaa, #666);
+  border: 2px solid silver;
+  border-radius: 50%;
+  animation: slash 0.6s ease-out;
+  top: -250%; /* Ajusta según posición del rival */
+  left: 67%;
+  z-index: 10;
+}
+
+
+     .attack1 btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .attack1 btn:hover {
+      background-color: #0056b3;
+    }
+
+    .circulo {
+           width: 50px;
+      height: 50px;
+      background-color: rgba(255, 0, 0, 0.185);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      visibility: hidden;
+    }
+
+    .animado {
+      animation: escalar 1s forwards;
+      visibility: visible;
+    }
+
+    @keyframes escalar {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(10); 
+      }
+    }
 /*# copi paste esto no entiendo como funciona */

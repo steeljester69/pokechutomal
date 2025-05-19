@@ -162,3 +162,54 @@ body {
   display: none;
   margin: 6%;
 }
+.metal-claw-animation {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #aaa, #666);
+  border: 2px solid silver;
+  border-radius: 50%;
+  animation: slash 0.6s ease-out;
+  top: -250%; /* Ajusta según posición del rival */
+  left: 67%;
+  z-index: 10;
+}
+
+
+    
+        .attack1 btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn-animar:hover {
+      background-color: #0056b3;
+    }
+
+    .circulo {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50%;
+      position: relative;
+      left: 0;
+      margin-top: 20px;
+    }
+
+    .animado {
+      animation: mover 3s forwards;
+    }
+
+    @keyframes mover {
+      from {
+        left: 0;
+      }
+      to {
+        left: 300px;
+      }
+    }
